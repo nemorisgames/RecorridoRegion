@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 [RequireComponent(typeof(TweenColor))]
 public class PuntoRuta : MonoBehaviour {
@@ -26,16 +27,18 @@ public class PuntoRuta : MonoBehaviour {
 	private UI2DSprite sprite;
 	public string nombre;
 	public string descripcion;
-	public List<UI2DSprite> imagenes;
+	public List<Sprite> imagenes;
 	public int expPunto = 0;
+	private UIButton btn;
 
 	void Awake(){
 		tweenColor = GetComponent<TweenColor>();
 		sprite = GetComponent<UI2DSprite>();
+		btn = GetComponent<UIButton>();
 	}
 
 	void Start(){
-		tweenColor.from = sprite.color;
+		//tweenColor.from = sprite.color;
 	}
 
 	public void InitPunto(int i, Ruta r){
@@ -43,6 +46,11 @@ public class PuntoRuta : MonoBehaviour {
 		indicePunto = i;
 		puntoVisitado = PlayerPrefs.GetInt("visitadoPunto"+indicePunto) == 1;
 		expPunto = (tipo == Tipo.Principal ? ruta.expPrincipal : ruta.expSecundario);
+		btn.defaultColor = r.color;
+		btn.UpdateColor(true);
+		tweenColor.from = btn.defaultColor;
+		tweenColor.to = btn.pressed;
+		tweenColor.ResetToBeginning();
 		if(puntoVisitado)
 			PuntoVisitado();
 	}
@@ -57,6 +65,11 @@ public class PuntoRuta : MonoBehaviour {
 
 	public void EnterPoint(){
 		tweenColor.PlayForward();
+		AnalyticsEvent.Custom("VisitaHito",new Dictionary<string, object>
+		{
+			{ "nombreHito", this.nombre },
+			{ "ruta", this.ruta.nombre }
+		});
 		ruta.CheckPunto(indicePunto);
 	}
 
@@ -65,6 +78,12 @@ public class PuntoRuta : MonoBehaviour {
 	}
 
 	public void ClickHito(){
+		//AnalyticsEvent.Custom(string customEventName, IDictionary<string, object> eventData);
+		AnalyticsEvent.Custom("ClickHito",new Dictionary<string, object>
+		{
+			{ "nombreHito", this.nombre },
+			{ "ruta", this.ruta.nombre }
+		});
 		GUIController.Instance.MostrarHito(this);
 	}
 }

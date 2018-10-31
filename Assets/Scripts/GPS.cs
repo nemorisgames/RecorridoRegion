@@ -15,8 +15,10 @@ public class GPS : MonoBehaviour {
 	[System.Serializable]
 	public struct MapPoint{
 		public string name;
+		public string descripcion;
 		public float latitud, longitud;
 		public Transform point;
+		public Sprite imagen;
 	}
 	public Vector2 originAdjust;
 	public bool debug = false;
@@ -26,17 +28,35 @@ public class GPS : MonoBehaviour {
 		if(_instance == null)
 			_instance = this;
 		DontDestroyOnLoad(this);
+		if(debug)
+			PlayerPrefs.DeleteAll();
 	}
 
 	void Start () {
 		StartCoroutine(StartGPS());
-		foreach(MapPoint p in points)
+		foreach(MapPoint p in points){
+			InitPoint(p);
 			LocatePoint(p);
+		}
+	}
+
+	void InitPoint(MapPoint p){
+		PuntoRuta pr = p.point.GetComponent<PuntoRuta>();
+		if(pr == null)
+			return;
+		pr.nombre = p.name;
+		pr.descripcion = p.descripcion;
+		pr.imagenes = new List<Sprite>();
+		pr.imagenes.Add(p.imagen);
 	}
 	
 	IEnumerator StartGPS(){
-		if (!Input.location.isEnabledByUser)
-            yield break;
+		if (!Input.location.isEnabledByUser){
+			#if UNITY_EDITOR
+			AutoScroll.Instance.StartOnUser();
+			#endif
+			yield break;
+		}
 		Input.location.Start();
 		int maxWait = 20;
         while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
@@ -53,6 +73,8 @@ public class GPS : MonoBehaviour {
 			activated = true;
 			locationInfo = Input.location.lastData;
 			Debug.Log(locationInfo.latitude+","+locationInfo.longitude);
+			LocateUser();
+			StartCoroutine(AutoScroll.Instance.DelayStartOnUser());
 		}
 	}
 
@@ -97,21 +119,39 @@ public class GPS : MonoBehaviour {
 		userLocation.latitud = locationInfo.latitude;
 		userLocation.longitud = locationInfo.longitude;
 		LocatePoint(userLocation);
+		AutoScroll.Instance.GoToUser();
+	}
+
+	void DebugLocateUser(){
+		LocatePoint(userLocation);
+		AutoScroll.Instance.GoToUser();
 	}
 
 	void DebugGPS(){
 		if(activated)
-			coordText.text = "activated: "+activated + " | Status: "+Input.location.status.ToString() + "\n" + userLocation.latitud +", "+userLocation.longitud;
+			coordText.text = "activated: "+activated + " | In bounds: "+ UserInBounds().ToString() + "\n" + userLocation.latitud +", "+userLocation.longitud;
 		else{
 			#if !UNITY_EDITOR
 				return;
 			#endif
-			Vector2 auxPos = userLocation.point.position;
+			
 			if(Input.GetAxis("Horizontal") != 0)
-				auxPos.x += Input.GetAxis("Horizontal") * Time.deltaTime * 200f;
+				userLocation.longitud += Input.GetAxis("Horizontal") * Time.deltaTime * 0.5f;
 			if(Input.GetAxis("Vertical") != 0)
-				auxPos.y += Input.GetAxis("Vertical") * Time.deltaTime * 200f;
-			userLocation.point.position = auxPos;
+				userLocation.latitud += Input.GetAxis("Vertical") * Time.deltaTime * 0.5f;
+
+			DebugLocateUser();
 		}
+	}
+
+	public bool UserInBounds(){
+		float longStart, latStart, longEnd, latEnd;
+		longStart = -74.30899f;
+		latStart = -38.16292f;
+		longEnd = -69.66879f;
+		latEnd = -41.73970f;
+		bool inBounds = (userLocation.latitud < latStart && userLocation.latitud > latEnd && userLocation.longitud > longStart && userLocation.longitud < longEnd);
+		userLocation.point.gameObject.SetActive(inBounds);
+		return inBounds;
 	}
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UserPoint : MonoBehaviour {
+	public Vector2 worldPos;
 
 	void OnTriggerEnter(Collider c){
 		if(c.tag == "Point"){
@@ -20,5 +21,9 @@ public class UserPoint : MonoBehaviour {
 				p.ExitPoint();
 			}
 		}
+	}
+
+	void Update(){
+		worldPos = transform.position;
 	}
 }

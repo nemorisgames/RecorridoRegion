@@ -36,6 +36,15 @@ public class UserData : MonoBehaviour {
 					puntos.Add(p);
 		}
 
+		//cargar estado medallas
+		Medalla aux;
+		for(int i = 0; i < medallas.Count; i++){
+			aux = medallas[i];
+			aux.desbloqueada = PlayerPrefs.GetInt("EstadoMedalla"+i,0) == 1 ? true : false;
+			medallas[i] = aux;
+		}
+
+
 		if(puntos.Count <= 0)
 			return;
 		foreach(PuntoRuta p in puntos){
@@ -88,7 +97,7 @@ public class UserData : MonoBehaviour {
 			}
 			visitadosX++;
 			if(visitadosX == totalX){
-				//asignar medalla total region
+				DesbloquearMedalla(7);
 			}
 			break;
 			case PuntoRuta.Region.XIV:
@@ -97,7 +106,7 @@ public class UserData : MonoBehaviour {
 			}
 			visitadosXIV++;
 			if(visitadosXIV == totalXIV){
-				//asignar medalla total region
+				DesbloquearMedalla(6);
 			}
 			break;
 		}
@@ -108,32 +117,45 @@ public class UserData : MonoBehaviour {
 
 		
 		//revisar si es 1er punto de ruta
-		if(rutas[indiceRuta].PrimerPuntoVisitado()){
+		if(TotalVisitados() == 1){
 			//entregar medalla
 			DesbloquearMedalla(0);
 			Debug.Log("primero ruta");
 		}
+
+		if(TotalVisitados() >= Total()/2)
+			DesbloquearMedalla(1);
+
+		if(TotalVisitados() >= Total())
+			DesbloquearMedalla(2);
 		
 
 		//revisar total puntos de ruta
-		else if(rutas[indiceRuta].TodosPuntosVisitados()){
+		if(rutas[indiceRuta].TodosPuntosVisitados()){
 			//entregar medalla
 			Debug.Log("todos ruta");
-			//GUIController.Instance.MostrarMedalla(medallas[2]);
+			int aux = Mathf.Clamp(8+indiceRuta,8,medallas.Count);
+			DesbloquearMedalla(aux);
 		}
-
-		//revisar exp ruta
-
-
-		//revisar exp total
 
 
 	}
 
+	int TotalVisitados(){
+		return visitadosIX + visitadosX + visitadosXIV;
+	}
+
+	int Total(){
+		return totalIX + totalX + totalXIV;
+	}
+
 	void DesbloquearMedalla(int i){
+		if(PlayerPrefs.GetInt("EstadoMedalla"+i,0) == 1)
+			return;
 		Medalla aux = medallas[i];
 		aux.desbloqueada = true;
-		GUIController.Instance.MostrarMedalla(aux);
+		StartCoroutine(GUIController.Instance.MostrarMedalla(aux));
 		medallas[i] = aux;
+		PlayerPrefs.SetInt("EstadoMedalla"+i,1);
 	}
 }

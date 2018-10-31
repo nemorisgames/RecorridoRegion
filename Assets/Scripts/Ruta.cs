@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 
 public class Ruta : MonoBehaviour {
+	public string nombre;
 	public List<PuntoRuta> puntos;
 	public List<Texture2D> premios;
 	public int indiceRuta;
@@ -11,10 +12,10 @@ public class Ruta : MonoBehaviour {
 	public int expTotalRuta = 0;
 	public int expPrincipal = 50;
 	public int expSecundario = 25;
+	public Color color;
 
 	// Use this for initialization
 	void Start () {
-		PlayerPrefs.DeleteAll();
 		experienciaRuta = PlayerPrefs.GetInt("expRuta"+indiceRuta,0);
 		for(int i = 0; i < puntos.Count; i++){
 			puntos[i].InitPunto(i,this);
