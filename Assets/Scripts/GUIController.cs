@@ -13,6 +13,7 @@ public class GUIController : MonoBehaviour {
 	[Header("Top")]
 	public Button btnGaleriaMedallas;
 	public Button btnLockUsuario;
+	public Button btnMute;
 	[Header("UIMapa")]
 	public CanvasGroup UIMapa;
 	[Header("Puntaje")]
@@ -41,8 +42,10 @@ public class GUIController : MonoBehaviour {
 	public CanvasGroup imagenHitoZoom;
 	public Image imagenZoom;
 	public bool mostrandoMedalla;
+	private AudioSource audioSource;
 
 	void Awake(){
+		audioSource = GetComponent<AudioSource>();
 		if(_instance == null)
 			_instance = this;
 	}
@@ -237,6 +240,11 @@ public class GUIController : MonoBehaviour {
 
 	public void UIBotonLock(bool b){
 		btnLockUsuario.GetComponent<Image>().color = (b ? btnLockUsuario.colors.pressedColor : btnLockUsuario.colors.normalColor);
+	}
+
+	public void UIBotonMute(){
+		audioSource.volume = audioSource.volume == 1 ? 0 : 1;
+		btnMute.GetComponent<Image>().color = audioSource.volume == 1 ? btnMute.colors.normalColor : btnMute.colors.pressedColor;
 	}
 	
 }

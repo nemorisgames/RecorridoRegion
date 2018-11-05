@@ -27,7 +27,6 @@ public class GPS : MonoBehaviour {
 	void Awake(){
 		if(_instance == null)
 			_instance = this;
-		DontDestroyOnLoad(this);
 		if(debug)
 			PlayerPrefs.DeleteAll();
 	}
