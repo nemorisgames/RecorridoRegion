@@ -74,6 +74,13 @@ public class Ruta : MonoBehaviour {
 		return aux == 1;
 	}
 
+	public int PuntosVisitados(){
+		int aux = 0;
+		foreach(PuntoRuta p in puntos)
+			if(p.puntoVisitado) aux++;
+		return aux;
+	}
+
 	public bool TodosPuntosVisitados(){
 		int aux = 0;
 		foreach(PuntoRuta p in puntos)

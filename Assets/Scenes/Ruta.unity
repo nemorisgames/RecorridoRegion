@@ -145,10 +145,10 @@ RectTransform:
   m_Father: {fileID: 1737958645}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -177.7, y: 20.05}
-  m_SizeDelta: {x: 61.24, y: 53.6}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 260, y: 21}
+  m_SizeDelta: {x: 61.23999, y: 53.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &14764316
 MonoBehaviour:
@@ -1169,7 +1169,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00003806994, y: 0.000017151237}
+  m_AnchoredPosition: {x: -0.00003806994, y: -0.0000058561563}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &154837880
@@ -1191,7 +1191,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 620, y: 150}
+  m_CellSize: {x: 630, y: 150}
   m_Spacing: {x: 0, y: 25}
   m_Constraint: 1
   m_ConstraintCount: 1
@@ -1242,8 +1242,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.850006, y: -105}
-  m_SizeDelta: {x: -176.7, y: -428.2}
+  m_AnchoredPosition: {x: 7.850006, y: -144.29999}
+  m_SizeDelta: {x: -176.7, y: -454.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &193948783
 MonoBehaviour:
@@ -1499,8 +1499,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
+  m_AnchoredPosition: {x: 3, y: 0}
+  m_SizeDelta: {x: 40, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &231401117
 MonoBehaviour:
@@ -1842,7 +1842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -16.449982, y: -225}
+  m_AnchoredPosition: {x: -16.449982, y: -225.55003}
   m_SizeDelta: {x: 600, y: 164.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &260585621
@@ -2631,6 +2631,8 @@ MonoBehaviour:
   descripcionHito: {fileID: 260585621}
   prefabImagen: {fileID: 1415565585069250, guid: 2e822e21d61ace24eb509128b5c0642e,
     type: 2}
+  url: {fileID: 2022197686}
+  urlUnderscore: {fileID: 2035355881}
   gridImagenesHito: {fileID: 193948783}
   descripcionRecompensa: {fileID: 1516986166}
   puntosRecompensa: {fileID: 1286269548}
@@ -3571,10 +3573,10 @@ RectTransform:
   m_Father: {fileID: 1737958645}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 226.8, y: 20.05}
-  m_SizeDelta: {x: 134.75, y: 33.66}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -239.29999, y: 21}
+  m_SizeDelta: {x: 188, y: 46.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &738587871
 MonoBehaviour:
@@ -3597,7 +3599,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -3608,7 +3610,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PUNTOS
+  m_Text: 'PUNTOS: '
 --- !u!222 &738587872
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4199,10 +4201,10 @@ RectTransform:
   m_Father: {fileID: 1737958645}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 319, y: 20.03}
-  m_SizeDelta: {x: 69.7, y: 33.7}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -100, y: 21}
+  m_SizeDelta: {x: 90.600006, y: 46.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &852084561
 MonoBehaviour:
@@ -4225,11 +4227,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 240
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -4453,7 +4455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.8, y: 0}
+  m_AnchoredPosition: {x: 0.8000002, y: 0}
   m_SizeDelta: {x: 27.5, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &869708303
@@ -4564,7 +4566,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 242058222}
   m_HandleRect: {fileID: 242058221}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5279,10 +5281,10 @@ RectTransform:
   m_Father: {fileID: 1737958645}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -324.4, y: 20.03}
-  m_SizeDelta: {x: 51.9, y: 160}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 100, y: 21}
+  m_SizeDelta: {x: 53.080017, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1067529429
 MonoBehaviour:
@@ -5401,10 +5403,10 @@ RectTransform:
   m_Father: {fileID: 1737958645}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -253.4, y: 20.05}
-  m_SizeDelta: {x: 61.24, y: 53.6}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 180, y: 21}
+  m_SizeDelta: {x: 61.23999, y: 53.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1074714725
 MonoBehaviour:
@@ -5525,7 +5527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0035095005, y: -36}
+  m_AnchoredPosition: {x: -22, y: -46.799988}
   m_SizeDelta: {x: 793, y: -93.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1121727410
@@ -5968,8 +5970,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.3, y: -124}
-  m_SizeDelta: {x: 632.3, y: 58.6}
+  m_AnchoredPosition: {x: -0.3, y: -118.9}
+  m_SizeDelta: {x: 632.3, y: 48.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1256593795
 MonoBehaviour:
@@ -6176,13 +6178,15 @@ RectTransform:
   - {fileID: 1256593794}
   - {fileID: 260585620}
   - {fileID: 193948782}
+  - {fileID: 2022197685}
+  - {fileID: 2035355880}
   m_Father: {fileID: 1262536224}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000000050194, y: -177}
-  m_SizeDelta: {x: 825.3, y: -658.6}
+  m_AnchoredPosition: {x: 0.000000050194, y: -131.59998}
+  m_SizeDelta: {x: 825.3, y: -590.4}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1263710912
 MonoBehaviour:
@@ -6618,7 +6622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1369867712
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6871,6 +6875,7 @@ MonoBehaviour:
     longitud: 0
     point: {fileID: 1036991879}
     imagen: {fileID: 0}
+    url: 
   points:
   - name: "Curacaut\xEDn"
     descripcion: "Amigable ciudad que es base para recorrer el circuito Araucan\xEDa
@@ -6881,6 +6886,7 @@ MonoBehaviour:
     longitud: -71.8897
     point: {fileID: 1142388476}
     imagen: {fileID: 21300000, guid: dd1d32a4dd5c58948b36206ab4ac3c02, type: 3}
+    url: https://www.vtic.cl/rutas/curacautin.php
   - name: "Volc\xE1n Lonquimay y Reserva Malalcahuello Nalcas"
     descripcion: "Es una reserva hermosa de f\xE1cil acceso. En el Volc\xE1n Lonquimay
       est\xE1 el centro de Ski Corralco. El sector cuenta con varios senderos para
@@ -6891,6 +6897,7 @@ MonoBehaviour:
     longitud: -71.5867
     point: {fileID: 1489538347}
     imagen: {fileID: 21300000, guid: 453344c87a2af3a49aa3f81ef458fd4c, type: 3}
+    url: https://www.vtic.cl/rutas/lonquimaymalalcahuello.php
   - name: Parque Nacional Conguillio
     descripcion: "Con el volc\xE1n Llaima como protagonista, es la gran estrella de
       este circuito. Entre sus atractivos naturales destacan la laguna Captr\xE9n,
@@ -6902,6 +6909,7 @@ MonoBehaviour:
     longitud: -71.6735
     point: {fileID: 1752501254}
     imagen: {fileID: 21300000, guid: fa1c919a87a850d49ad82809bd8e2494, type: 3}
+    url: https://www.vtic.cl/rutas/parqueconguillio.php
   - name: "Villarrica - Puc\xF3n"
     descripcion: "Ciudades vecinas, a orillas del gran lago Villarrica, han tenido
       un gran crecimiento tur\xEDstico en las \xFAltimas d\xE9cadas, especial- mente
@@ -6913,6 +6921,7 @@ MonoBehaviour:
     longitud: -72.2308
     point: {fileID: 380260922}
     imagen: {fileID: 21300000, guid: 6cadd33aad4d0a943a8e45e0060c2b9c, type: 3}
+    url: https://www.vtic.cl/rutas/villarricapucon.php
   - name: Parque Nacional Villarrica
     descripcion: "El Parque Nacional Villarrica condensa las mayores atracciones naturales
       y tur\xEDsticas de esta zona.  El s\xEDmbolo es el volc\xE1n Villarrica, hasta
@@ -6925,6 +6934,7 @@ MonoBehaviour:
     longitud: -71.764
     point: {fileID: 1777688250}
     imagen: {fileID: 21300000, guid: 34e9a860ccabcf249a2cb8f5bc2b55cd, type: 3}
+    url: https://www.vtic.cl/rutas/parquevillarrica.php
   - name: Curarrehue
     descripcion: "Peque\xF1a localidad ubicada 38 km al este de Puc\xF3n, por el camino
       internacional, que en los \xFAltimos a\xF1os ha visto florecer una interesante
@@ -6934,6 +6944,7 @@ MonoBehaviour:
     longitud: -71.589
     point: {fileID: 1967669105}
     imagen: {fileID: 21300000, guid: 88a2c9a494567a14c94ccfa11ef4a9c0, type: 3}
+    url: https://www.vtic.cl/rutas/curarrehue.php
   - name: Panguipulli
     descripcion: "Antiguo puerto maderero, esta ciudad es la cabecera municipal de
       una vasta \xE1rea que abarca el sur del lago Calafqu\xE9n y los lagos Panguipulli,
@@ -6946,7 +6957,8 @@ MonoBehaviour:
     latitud: -39.6416
     longitud: -72.337
     point: {fileID: 891097337}
-    imagen: {fileID: 21300000, guid: 88a2c9a494567a14c94ccfa11ef4a9c0, type: 3}
+    imagen: {fileID: 21300000, guid: 33f53fea19df1c548b215f4db4fb121a, type: 3}
+    url: https://www.vtic.cl/rutas/panguipulli.php
   - name: "Volc\xE1n Mocho-Choshuenco"
     descripcion: "Gran hito natural de la zona, se caracteriza por tener dos conos
       volc\xE1nicos, de los cuales deriva su nombre: Mocho (2.422 m) y Choshuenco
@@ -6960,6 +6972,7 @@ MonoBehaviour:
     longitud: -72.0375
     point: {fileID: 1902290937}
     imagen: {fileID: 21300000, guid: a4bbf75a6da82f7438a546503a94b8c3, type: 3}
+    url: https://www.vtic.cl/rutas/mochochoshuenco.php
   - name: "Reserva Ecol\xF3gica Huilo Huilo"
     descripcion: "Ubicada 55 km al este de Panguipulli, es una iniciativa privada
       que protege 60.000 ha de bosque valdiviano, donde se encuentran saltos de agua,
@@ -6973,6 +6986,7 @@ MonoBehaviour:
     longitud: -71.9528
     point: {fileID: 841035772}
     imagen: {fileID: 21300000, guid: d7ad56cbce6123f41811ee5130fcb0de, type: 3}
+    url: https://www.vtic.cl/rutas/huilohuilo.php
   - name: Lago Ranco
     descripcion: "El coraz\xF3n de este circuito. Con 442 km2 de superficie, 199 metros
       de profundidad y 13 islas, es el tercer lago m\xE1s grande de Chile. Tiene dos
@@ -6983,6 +6997,7 @@ MonoBehaviour:
     longitud: -72.4822
     point: {fileID: 103167345}
     imagen: {fileID: 21300000, guid: a6a0b48dad4068f43a38cb2fa163e66c, type: 3}
+    url: https://www.vtic.cl/rutas/lagoranco.php
   - name: Futrono
     descripcion: "Cabecera tur\xEDstica del lago Ranco en su ribera norte, con amplia
       variedad de servicios, la ciudad de Futrono destaca adem\xE1s por la elaboraci\xF3n
@@ -6992,6 +7007,7 @@ MonoBehaviour:
     longitud: -72.3808
     point: {fileID: 1541504925}
     imagen: {fileID: 21300000, guid: b3f6b61230bca0b4facbca23a5dbf88a, type: 3}
+    url: https://www.vtic.cl/rutas/futrono.php
   - name: Lago Maihue
     descripcion: "Es el otro lago de este circuito. De forma alargada, con 49 km2
       de superficie, su ribera norte est\xE1 flanqueada por cerros cubiertos de bosques,
@@ -7002,6 +7018,7 @@ MonoBehaviour:
     longitud: -72.035
     point: {fileID: 1062751872}
     imagen: {fileID: 21300000, guid: a31fac0b219c12a4e88191a724608d42, type: 3}
+    url: https://www.vtic.cl/rutas/lagomaihue.php
   - name: Puente Chirre
     descripcion: "A 12 km de la localidad de Mantilhue, es una impresionante obra
       arquitect\xF3nica construida en 1925 para conectar las ciu- dades de R\xEDo
@@ -7011,6 +7028,7 @@ MonoBehaviour:
     longitud: -72.65751
     point: {fileID: 79556761}
     imagen: {fileID: 21300000, guid: c29f108d4a7e2dc4f9727e6c1aa1ff4e, type: 3}
+    url: https://www.vtic.cl/rutas/puentechirre.php
   - name: Lago Puyehue
     descripcion: "Con casi 16.000 ha de superficie, su nombre en mapudung\xFAn (\u201Clugar
       de puyes\u201D) alude a la abundancia de estos peque\xF1os peces que forman
@@ -7021,6 +7039,7 @@ MonoBehaviour:
     longitud: -72.6024
     point: {fileID: 856148171}
     imagen: {fileID: 21300000, guid: f59ac0ca3907a2f49966ca6f8e54b632, type: 3}
+    url: https://www.vtic.cl/rutas/lagopuyehue.php
   - name: Lago Rupanco
     descripcion: "Mucho menos conocido y solitario que el Puyehue, este hermoso lago
       de 23.000 ha est\xE1 a los pies del volc\xE1n Puntiagudo (2.493 m), que debe
@@ -7032,6 +7051,7 @@ MonoBehaviour:
     longitud: -72.541145
     point: {fileID: 1665813674}
     imagen: {fileID: 21300000, guid: 2347941c63678fa40a21eedfe7d85c23, type: 3}
+    url: https://www.vtic.cl/rutas/lagorupanco.php
   - name: Frutillar
     descripcion: "Ubicada a 45 km de Puerto Varas, en la ribera oriental del lago
       Llanquihue, esta ciudad destaca por su cuidada arquitectura de estilo alem\xE1n
@@ -7045,6 +7065,7 @@ MonoBehaviour:
     longitud: -73.0497
     point: {fileID: 505208074}
     imagen: {fileID: 21300000, guid: 68803ea2f13e222469069b188ff31829, type: 3}
+    url: https://www.vtic.cl/rutas/frutillar.php
   - name: "Volc\xE1n Osorno"
     descripcion: "Con 2.652 msnm, su bella forma c\xF3nica es la figura omnipresente
       de la cuenca del Llanquihue. Cuenta con diversos senderos que permiten explorar
@@ -7055,6 +7076,7 @@ MonoBehaviour:
     longitud: -72.4474
     point: {fileID: 1976489827}
     imagen: {fileID: 21300000, guid: af51c1ccd59d16b4aa2782eb16763e85, type: 3}
+    url: https://www.vtic.cl/rutas/volcanosorno.php
   - name: Puerto Octay
     descripcion: "Declarado Zona T\xEDpica en 2010, es uno de los pueblos m\xE1s pintorescos
       y mejor conservados de la cuenca del Llanquihue. Se ubica frente a la Pen\xEDnsula
@@ -7065,6 +7087,7 @@ MonoBehaviour:
     longitud: -72.882
     point: {fileID: 2021789834}
     imagen: {fileID: 21300000, guid: 49523834ae241104b8a05fa10de1da9d, type: 3}
+    url: https://www.vtic.cl/rutas/ptooctay.php
   originAdjust: {x: 62069, y: 44674}
   debug: 0
   coordText: {fileID: 83666340}
@@ -7802,8 +7825,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0035019, y: -64}
-  m_SizeDelta: {x: 720, y: 127.2}
+  m_AnchoredPosition: {x: 0.0035019, y: -61.5}
+  m_SizeDelta: {x: 720, y: 122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1737958646
 MonoBehaviour:
@@ -8498,8 +8521,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 2.5, y: -85}
-  m_SizeDelta: {x: 635.6, y: -161.5}
+  m_AnchoredPosition: {x: 19.3, y: -85}
+  m_SizeDelta: {x: 669.2, y: -161.5}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1870896747
 MonoBehaviour:
@@ -8792,7 +8815,7 @@ Prefab:
     - target: {fileID: 224231397799498066, guid: 600b7f641cc9c9f4a92d999ac6cd3fa9,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 310
+      value: 315
       objectReference: {fileID: 0}
     - target: {fileID: 224231397799498066, guid: 600b7f641cc9c9f4a92d999ac6cd3fa9,
         type: 2}
@@ -8802,7 +8825,7 @@ Prefab:
     - target: {fileID: 224231397799498066, guid: 600b7f641cc9c9f4a92d999ac6cd3fa9,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 620
+      value: 630
       objectReference: {fileID: 0}
     - target: {fileID: 224231397799498066, guid: 600b7f641cc9c9f4a92d999ac6cd3fa9,
         type: 2}
@@ -9156,6 +9179,238 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1630790224}
   m_Script: {fileID: 11500000, guid: 460d89fd3335baf4e9bf0c00938542df, type: 3}
+--- !u!1 &2022197684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2022197685}
+  - component: {fileID: 2022197688}
+  - component: {fileID: 2022197687}
+  - component: {fileID: 2022197686}
+  m_Layer: 5
+  m_Name: LinkPDF
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2022197685
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022197684}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.00000029802322}
+  m_LocalScale: {x: 1.000002, y: 1.000002, z: 1.000002}
+  m_Children: []
+  m_Father: {fileID: 1263710911}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -16.45, y: -332.20007}
+  m_SizeDelta: {x: 600, y: 48.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2022197686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022197684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2022197687}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &2022197687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022197684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.4237718, g: 0.7829671, b: 0.8396226, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 50
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Ver m\xE1s informaci\xF3n sobre este hito"
+--- !u!222 &2022197688
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022197684}
+--- !u!1 &2035355879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2035355880}
+  - component: {fileID: 2035355883}
+  - component: {fileID: 2035355882}
+  - component: {fileID: 2035355881}
+  m_Layer: 5
+  m_Name: LinkPDFUnderscore
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2035355880
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2035355879}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.00000029802322}
+  m_LocalScale: {x: 1.000002, y: 1.000002, z: 1.000002}
+  m_Children: []
+  m_Father: {fileID: 1263710911}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -16.45, y: -332.20013}
+  m_SizeDelta: {x: 600, y: 48.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2035355881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2035355879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2022197687}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &2035355882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2035355879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.4237718, g: 0.7829671, b: 0.8396226, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 50
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: ____________________________
+--- !u!222 &2035355883
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2035355879}
 --- !u!1 &2078021660
 GameObject:
   m_ObjectHideFlags: 0

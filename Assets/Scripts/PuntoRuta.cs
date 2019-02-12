@@ -17,7 +17,7 @@ public class PuntoRuta : MonoBehaviour {
 	}
 
 	public Region region;
-
+	public string url;
 	public Tipo tipo = Tipo.Secundario;
 	public int indicePunto;
 	public bool puntoVisitado = false;

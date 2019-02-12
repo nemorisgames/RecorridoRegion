@@ -82,7 +82,9 @@ public class UserData : MonoBehaviour {
 		switch(p.region){
 			case PuntoRuta.Region.IX:
 			if(visitadosIX == 0){
-				//asignar medalla por visitar region
+				//visitado uno de cada region
+				if(visitadosX != 0 && visitadosXIV != 0)
+					DesbloquearMedalla(4);
 			}
 			visitadosIX++;
 			if(visitadosIX == totalIX){
@@ -93,7 +95,9 @@ public class UserData : MonoBehaviour {
 			break;
 			case PuntoRuta.Region.X:
 			if(visitadosX == 0){
-				//asignar medalla por visitar region
+				//visitado uno de cada region
+				if(visitadosIX != 0 && visitadosXIV != 0)
+					DesbloquearMedalla(4);
 			}
 			visitadosX++;
 			if(visitadosX == totalX){
@@ -103,6 +107,9 @@ public class UserData : MonoBehaviour {
 			case PuntoRuta.Region.XIV:
 			if(visitadosXIV == 0){
 				//asignar medalla por visitar region
+				//visitado uno de cada region
+				if(visitadosX != 0 && visitadosX != 0)
+					DesbloquearMedalla(4);
 			}
 			visitadosXIV++;
 			if(visitadosXIV == totalXIV){
@@ -129,6 +136,17 @@ public class UserData : MonoBehaviour {
 		if(TotalVisitados() >= Total())
 			DesbloquearMedalla(2);
 		
+		if(PlayerPrefs.GetInt("EstadoMedalla"+3,0) == 0){
+			bool desbloquear = true;
+			foreach(Ruta r in rutas){
+				if(r.PuntosVisitados() == 0){
+					desbloquear = false;
+					break;
+				}
+			}
+			if(desbloquear)
+				DesbloquearMedalla(3);
+		}
 
 		//revisar total puntos de ruta
 		if(rutas[indiceRuta].TodosPuntosVisitados()){

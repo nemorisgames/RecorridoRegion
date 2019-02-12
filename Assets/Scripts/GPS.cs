@@ -19,6 +19,7 @@ public class GPS : MonoBehaviour {
 		public float latitud, longitud;
 		public Transform point;
 		public Sprite imagen;
+		public string url;
 	}
 	public Vector2 originAdjust;
 	public bool debug = false;
@@ -47,6 +48,7 @@ public class GPS : MonoBehaviour {
 		pr.descripcion = p.descripcion;
 		pr.imagenes = new List<Sprite>();
 		pr.imagenes.Add(p.imagen);
+		pr.url = p.url;
 	}
 	
 	IEnumerator StartGPS(){
@@ -150,7 +152,7 @@ public class GPS : MonoBehaviour {
 		longEnd = -69.66879f;
 		latEnd = -41.73970f;
 		bool inBounds = (userLocation.latitud < latStart && userLocation.latitud > latEnd && userLocation.longitud > longStart && userLocation.longitud < longEnd);
-		userLocation.point.gameObject.SetActive(inBounds);
+		if(!debug)userLocation.point.gameObject.SetActive(inBounds);
 		return inBounds;
 	}
 }

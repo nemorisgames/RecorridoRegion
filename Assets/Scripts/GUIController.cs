@@ -22,6 +22,9 @@ public class GUIController : MonoBehaviour {
 	public Text nombreHito;
 	public Text descripcionHito;
 	public GameObject prefabImagen;
+	public Button url;
+	public Button urlUnderscore;
+	private Text urlText;
 	public GridLayoutGroup gridImagenesHito;
 	[Header("Recompensa")]
 	public Text descripcionRecompensa;
@@ -53,25 +56,22 @@ public class GUIController : MonoBehaviour {
 		HideAll();
 	}
 
+	void Update(){
+		if(Input.GetKeyDown(KeyCode.Escape))
+			Application.Quit();
+	}
+
+	public void OpenURL(string s){
+		Application.OpenURL(s);
+	}
+
 	public void MostrarHito(PuntoRuta p){
 		gridImagenesHito.transform.DestroyChildren();
 		nombreHito.text = p.nombre;
-		/*if(p.puntoVisitado){
-			descripcionHito.text = p.descripcion;
-			for(int i = 0; i < p.imagenes.Count; i++){
-				GameObject go = (GameObject)Instantiate(prefabImagen,gridImagenesHito.transform.position,gridImagenesHito.transform.rotation,gridImagenesHito.transform);
-				go.GetComponent<ImagenGaleria>().imagen.sprite = p.imagenes[i];
-				go.GetComponent<ImagenGaleria>().clickable = true;
-			}
-		}
-		else{
-			descripcionHito.text = "Visita este hito para obtener más información.";
-			for(int i = 0; i < p.imagenes.Count; i++){
-				GameObject go = (GameObject)Instantiate(prefabImagen,gridImagenesHito.transform.position,gridImagenesHito.transform.rotation,gridImagenesHito.transform);
-				go.GetComponent<ImagenGaleria>().imagen.color = Color.gray;
-			}
-		}*/
-
+		urlUnderscore.onClick.RemoveAllListeners();
+		urlUnderscore.onClick.AddListener(() => {OpenURL(p.url);});
+		urlUnderscore.gameObject.SetActive(p.puntoVisitado ? true : false);
+		url.gameObject.SetActive(p.puntoVisitado ? true : false);
 		descripcionHito.text = p.puntoVisitado ? p.descripcion : "Visita este hito para obtener más información.";
 		for(int i = 0; i < p.imagenes.Count; i++){
 			GameObject go = (GameObject)Instantiate(prefabImagen,gridImagenesHito.transform.position,gridImagenesHito.transform.rotation,gridImagenesHito.transform);
